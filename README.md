@@ -1,4 +1,4 @@
-# the-canadian-cropland-dataset[# The Canadian Cropland Dataset.md]
+# the-canadian-cropland-dataset
 
 This website has been created to collect and update a database on croplands in Canada. The dataset is inspired by the Eurosat dataset.
 
