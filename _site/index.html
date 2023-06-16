@@ -322,7 +322,9 @@ conda install -c conda-forge rasterio
               <p>Where R<sub>750</sub> is the NIR spectral band centered at 750 nm.</p>
             </li>
             <li>
-              <strong>OSAVI</strong> - In conditions when vegetation is low and soil properties are unknown, indices like the NDVI can be subject to bias due to high levels of reflection. The <em>Optimized Soil-Adjusted Variation Index</em> was created to provide an estimate of biomass that is more
+              <strong>OSAVI</strong> - In conditions when vegetation is low and soil properties are unknown, indices like the NDVI can be subject to bias due to high levels of reflection. The <em>Optimized Soil-Adjusted Variation Index</em> was created to provide an estimate of biomass that is more resilient when faced with soil and atmospheric effects. OSAVI is defined as:  
+              <p style="text-align: center; border: 1px solid black;"><em>OSAVI = OSAVI = (ρ<sub>NIR</sub> - ρ<sub>red</sub>) / (ρ<sub>NIR</sub> + ρ<sub>red</sub> + 0.16)</em></p>
+              </li>
 </section>
           
 
