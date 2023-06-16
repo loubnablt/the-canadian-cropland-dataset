@@ -1,0 +1,479 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+        body {font-family:'Times New Roman', Times, serif;}
+    </style>
+    <meta charset="utf-8">
+    <title>The Canadian Cropland Dataset</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <div class="banner">
+        <ul class="menu">
+          <li>
+            <a href="#dataset-description">Dataset Description</a>
+            <ul class="submenu">
+              <li><a href="#features">Features</a></li>
+              <li><a href="#running-the-software">Running the Software</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#repository-description">Description of Repository</a>
+            <ul class="submenu">
+                <li><a href="#data-cleaning">Data Cleaning</a></li>
+                <li><a href="#data-collection">Data Collection</a></li>
+                <li><a href="#earth-engine">Earth Engine</a></li>
+                <li><a href="#machine-learning">Machine Learning</a></li>
+                <li><a href="#figures">Figures</a></li> 
+            </ul>
+            </li>
+          <li><a href="#median-vegetation-index">Median Vegetation Index</a></li>
+          <li><a href="#statistics">Statistics</a></li>
+          <li><a href="#references">References</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+<style>
+.banner {
+        background-color: #f0f0f0;
+        padding: 10px;
+      }
+      
+      .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Aligner les éléments au centre */
+      }
+      
+      .menu li {
+        display: inline;
+        margin-right: 10px;
+        position: relative; /* Définir une position relative pour les éléments du menu */
+    }
+      
+      .menu li a {
+        text-decoration: none;
+        color: #333;
+        padding: 5px 10px;
+      }
+      
+      .menu li a:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .submenu {
+        display: none; /* Masquer le sous-menu par défaut */
+        position: absolute; /* Positionner le sous-menu de manière absolue */
+        top: 100%; /* Positionner le sous-menu en dessous de l'élément parent */
+        left: 0;
+        background-color: #f0f0f0;
+        padding: 10px;
+    }
+
+    .menu li:hover .submenu {
+      display: block; /* Afficher le sous-menu au survol */
+    }
+    
+    .submenu li {
+      display: block;
+      margin: 5px 0;
+    }
+  </style>
+
+</style>
+</head>
+
+  <body>
+    <h1>{{page.title}}</h1>
+    
+    <main>
+        <section id="dataset-description">
+            <h2>Dataset description</h2>
+            <p>This repository contains instructions and code for use with the novel patch-based dataset, the <em>Canadian Cropland Dataset</em>, inspired by the <a href="https://ieeexplore.ieee.org/document/8736785" target="_blank" rel="noopener noreferrer">Eurosat dataset</a>. It is compiled using optical satellite images of Canadian agricultural croplands retrieved from Sentinel-2. A total of 78,536 high-resolution geo-referenced images (Figure 1) of 10 main crop types (barley, canola, corn, mixedwood, oats, orchard, pasture, potato, soybean, springwheat) over 5 months (June-October) and 4 years (2017-2020) were extracted using <a href="https://earthengine.google.com/" target="_blank" rel="noopener noreferrer">Google Earth Engine</a> (GEE) and were automatically labelled with the <a href="https://www.agr.gc.ca/atlas/aci" target="_blank" rel="noopener noreferrer">Canadian Crop Inventory</a>. Each image contains 12 main spectral bands as well as a selection of bands corresponding to vegetation indices (GNDVI, NDVI, NDVI45, OSAVI and PSRI) (Figure 2). Images were collected using a list of 6,633 geographical points of Canadian agricultural fields.
+            </p>
+            
+        <p>The dataset can be accessed through this <a href="https://drive.google.com/drive/folders/1mNI8B5EMk0Xgvx2Pc9ztnQRaW9pXh8yb?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a> link and could be used to study the effects of different crop rotation patterns and management practices on long-term yield, land resilience and overall field productivity. In the upcoming months, we will be hosting it on a website at Université du Québec à Montreal. The Drive contains the preprocessed and cleaned images from all years in train/validation/test splits. Each split is identical and contains the same points across the image type (RGB, GNDVI, etc.). In the future, we expect that this evolving dataset will drive the development of robust agro-environmental models, enabling accelerated understanding of intricate agricultural regions through accurate and continuous monitoring of land cover.</p>
+            
+            <p><img src="../figures/crop_mosaic_10_categories.png" alt="dataset overview" width="800" height="400"><br>
+                Figure 1: An overview of sample patches of the crop classes in the dataset. The images measure 64 x 64 pixels and have a spatial resolution of 10 m/pixel.</p> 
+    <br>
+
+        <section id="features">
+            <h2>Features</h2>
+            <p> <ul>
+                <li> Access to the complete database on croplands in Canada. </li>
+                <li> Advanced search functionality to filter data based on specific criteria (region, crop type, year, etc.).</li>   
+                <li>Download of raw data in CSV format for further analysis.</li>   
+            </ul>
+                
+            </p>
+            </section>
+        
+
+        <section id="running-the-software">
+            <h2>Running the Software</h2>
+            <h3>Python version</h3>
+<ul>
+  <li><a href="https://www.python.org/downloads/release/python-388/">python 3.8.8</a></li>
+</ul>
+
+<h3>Other libraries</h3>
+<p>You can install these required libraries using the    <code>  conda install -c conda-forge --library_name</code> command:</p>
+
+<pre><code>conda install -c conda-forge earthengine-api
+conda install -c conda-forge keras-gpu  
+conda install -c conda-forge imutils
+conda install -c conda-forge scikit-learn
+conda install -c conda-forge scikit-image
+conda install -c conda-forge numpy
+conda install -c conda-forge opencv
+conda install -c conda-forge pandas
+conda install -c conda-forge pillow
+conda install -c conda-forge jupyterlab
+conda install -c conda-forge matplotlib
+conda install -c conda-forge rasterio
+</code></pre>
+
+            </section>
+
+
+        <section id="repository-description">
+            <h2>Description of Repository</h2>
+
+<section id="data-cleaning">
+            <h2>Data Cleaning</h2>
+            <p> Contains functions for manipulating images and moving files around to create label specific directories and training/validation/test sets. We use a Java application for removing cloudy/noisy images from the collection (NOT CONTAINED IN THIS REPOSITORY).
+            </p>
+
+            <figure>
+                <img src="../figures/rapid_tags.png" alt="rapid tags">
+                <figcaption>Figure 3: A screenshot of the data cleaning software developed in Java. The dataset is manually curated by manually removing cloudy images, noisy images and images with missing pixels.</figcaption>
+              </figure>
+<p>Here are some of the python scripts that we can find about data cleaning: </p>
+<style>
+    .card {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+  
+    .card-image {
+      width: 100%;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out; /* Ajoutez cette ligne pour la transition */
+    }
+  
+    .card-image:hover {
+      transform: scale(1.2); /* Définit l'agrandissement de l'image au survol */
+    }
+  </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-image" style="background-image: url(figures/create_png_dataset.png)"></div>
+      <div class="card-content">
+        <h4>Create png dataset</h4>
+        <p>Here is the python script to <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_cleaning/create_png_dataset.py">create png dataset</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+        <div class="card-image" style="background-image: url(figures/create_sub_directories.png)"></div>
+        <div class="card-content">
+          <h4>Create sub directories</h4>
+          <p>Here is the python script to <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_cleaning/create_sub_directories.py">create sub directories</a></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image" style="background-image: url(figures/create_train_test_split.png)"></div>
+        <div class="card-content">
+          <h4>Create train test split</h4>
+          <p>Here is the python script to <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_cleaning/create_train_test_split.py">create train test split</a></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image" style="background-image: url(figures/image_to_png.png)"></div>
+        <div class="card-content">
+          <h4>Image to png</h4>
+          <p>Here is the python script to <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_cleaning/image_to_png.py">image to png</a></p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image" style="background-image: url(figures/split_datasets.png)"></div>
+        <div class="card-content">
+          <h4>Split datasets</h4>
+          <p>Here is the python script to <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_cleaning/split_datasets.py">split datasets</a></p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-image" style="background-image: url(figures/utils.png)"></div>
+        <div class="card-content">
+          <h4>Utils</h4>
+          <p>Here are the <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_cleaning/utils.py">utils</a></p>
+        </div>
+      </div>
+      
+
+
+  </body>
+  </html>
+
+            
+</section>
+
+
+<section id="data-collection">
+<h2>Data Collection</h2>
+<p>Contains multiple python scripts for downloading the Sentinel-2 images for each point in the sample .csv file. It also contains some data visualization code.</p>
+
+<h4>Download sentinel image</h4>
+<p>Here is the python script to <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/download_sentinel_images.py">download sentinel image</a></p>
+
+<h4>Earth engine downloader</h4>
+<p>Here is the python script to <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/EarthEngineDownloader.py">earth engine downloader</a></p>
+
+<h4>ACI crop classifications</h4>
+<p>In the Dataset collection we also have information about <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/aci_crop_classifications_iac_classifications_des_cultures.csv">crop and some classifications</a></p>
+
+<h4>Points all categories 2019</h4>
+<p>We can also find information about <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/points_ALL_categories_2019.csv">all categories in 2019</a> in the dataset collection.</p>
+
+<h4>GEE sentinel imagescraping 2018 ACI</h4>
+<p>Here is the python script for <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/gee_sentinel_imagescraping_2018_ACI.py">GEE sentinel imagescraping 2018 ACI</a></p>
+</section>
+
+
+
+<section id="median-vegetation-index">
+    <h2>Median Vegetation Index</h2>
+        <figure>
+          <img src="../figures/vegetation.indice.png" alt="vegetation indices" width="500" height="400">
+          <figcaption>Figure 2: Collected imagery - Median vegetation indices.</figcaption>
+        </figure>
+
+        <br>
+        <br>
+        <table style="border-collapse: collapse; table-layout: fixed; width: 100%;">
+            <tr>
+              <th style="border: 1px solid black; text-align: center;">Index</th>
+              <th style="border: 1px solid black; text-align: center;">Description</th>
+            </tr>
+            <tr style="background-color: #f2f2f2;">
+              <td style="border: 1px solid black; text-align: center;">NDVI</td>
+              <td style="border: 1px solid black; text-align: center;">Indicator of plant growth and health, measures emitted chlorophyll</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; text-align: center;">NDVI45</td>
+              <td style="border: 1px solid black; text-align: center;">Indicates the amount of biomass and evapotranspiration, provides information on canopy structure</td>
+            </tr>
+            <tr style="background-color: #f2f2f2;">
+              <td style="border: 1px solid black; text-align: center;">GNDVI</td>
+              <td style="border: 1px solid black; text-align: center;">Correlates to the rate of photosynthesis, used to monitor plant stress</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; text-align: center;">PSRI</td>
+              <td style="border: 1px solid black; text-align: center;">Measures the onset, the stage, and the relative rates of the senescence or ripening of a crop cover</td>
+            </tr>
+            <tr style="background-color: #f2f2f2;">
+              <td style="border: 1px solid black; text-align: center;">OSAVI</td>
+              <td style="border: 1px solid black; text-align: center;">Provides an estimate of biomass that is more resilient when faced with soil and atmospheric effects</td>
+            </tr>
+          </table>
+          <br>
+          <br>
+          
+          <ul>
+            <li>
+              <strong>NDVI</strong> - The <em>Normalized Difference Vegetation Index</em> is one of the most predominantly used indicators of plant growth and health. It correlates with the amount of chlorophyll emitted by a plant. NDVI is defined as:
+              <p style="text-align: center; border: 1px solid black;"><em>NDVI = (ρ<sub>NIR</sub> - ρ<sub>red</sub>) / (ρ<sub>NIR</sub> + ρ<sub>red</sub>)</em></p>
+              <p>Where ρ<sub>NIR</sub> is equal to the NIR band and ρ<sub>red</sub> is the visible red band.</p>
+            </li>
+            <li>
+              <strong>NDVI45</strong> - The <em>NDV45</em> vegetation index is a revised version of the NDVI. It is strongly correlated with the leaf area index (LAI), which is an estimate of the amount of biomass and vegetative evapotranspiration, and provides information regarding the structure of a canopy. NDVI45 is defined as:
+              <p style="text-align: center; border: 1px solid black;"><em>NDVI45 = (R<sub>704</sub> - ρ<sub>red</sub>) / (R<sub>704</sub> + ρ<sub>red</sub>)</em></p>
+              <p>Where R<sub>704</sub> is the NIR spectral band centered at 704 nm.</p>
+            </li>
+            <li>
+              <strong>GNDVI</strong> - The <em>Green Normalized Difference Vegetation Index</em> was shown to correlate to the rate of photosynthesis and is used to monitor plant stress. GNDVI is calculated in a way that is analogous to NDVI, however the red band is replaced by the green band (ρ<sub>green</sub>). GNDVI is defined as:
+              <p style="text-align: center; border: 1px solid black;"><em>GNDVI = (ρ<sub>NIR</sub> - ρ<sub>green</sub>) / (ρ<sub>NIR</sub> + ρ<sub>green</sub>)</em></p>
+            </li>
+            <li>
+              <strong>PSRI</strong> - The <em>Plant Senescence Reflectance Index</em> is used to measure the onset, the stage, and the relative rates of the senescence or ripening of a crop cover. An increase in PSRI indicates heightened canopy stress. PSRI is defined by the equation:
+              <p style="text-align: center; border: 1px solid black;"><em>PSRI = (ρ<sub>red</sub> - ρ<sub>blue</sub>) / R<sub>750</sub></em></p>
+              <p>Where R<sub>750</sub> is the NIR spectral band centered at 750 nm.</p>
+            </li>
+            <li>
+              <strong>OSAVI</strong> - In conditions when vegetation is low and soil properties are unknown, indices like the NDVI can be subject to bias due to high levels of reflection. The <em>Optimized Soil-Adjusted Variation Index</em> was created to provide an estimate of biomass that is more
+</section>
+          
+
+<section id="statistics">
+<h2>Statistics</h2>
+<p>Contains spreadsheets and figures depicting the distribution of the images within the dataset.</p>
+
+<p>The figures are bar charts representing several counts (crop, image, month, and province) from year 2016 to 2019, first all together and then showing each year individually.</p>
+
+<h4>Count of the number of images for each crop type</h4>
+<style>
+    {
+        text-align: center;
+    }
+</style>
+
+  <style>
+    .image-container {
+      display: flex; /* Utiliser le flexbox pour aligner les images horizontalement */
+      justify-content: space-between; /* Espacement égal entre les images */
+    }
+    
+    .image-container figure {
+      width: 50%; /* Chaque figure prend 50% de la largeur du conteneur */
+      text-align: center; /* Centrer le contenu de la figure */
+    }
+    
+    .image-container img {
+      width: 100%; /* L'image occupe toute la largeur de la figure */
+    }
+  </style>
+<!--  <style>
+    h4 {
+        text-align: center;
+    }
+  </style>
+  --->
+
+  <div class="image-container">
+    <figure>
+      <img src="../figures/crop_counts_all_years(2016-2019).png" alt="crop counts all years" width="700" height="400">
+      <figcaption>Figure 4: Representation of the crop counts from year 2016 to 2019</figcaption>
+    </figure>
+    <figure>
+      <img src="../figures/crop_counts_all_years_individual.png" alt="crop counts all years individual" width="700" height="400">
+      <figcaption>Figure 5: Representation of the crop counts all years (from 2016 to 2019) individually</figcaption>
+    </figure>
+  </div>
+
+
+<h4>Count of the number of sets for each image in a set</h4>
+
+
+<div class="image-container">
+<figure>
+    <img src="../figures/image_counts_all_years(2016-2019).png" alt="image counts all years" width="700" height="400">
+    <p>Figure 6: Representation of the image counts from year 2016 to 2019</p>
+</figure>
+<figure>
+<img src="../figures/image_counts_all_years_individual.png" alt="image counts all years individual" width="700" height="400">
+<p>Figure 7: Representation of the image counts all years (from 2016 to 2019) individually</p>
+</figure>
+</div>
+
+
+<h4>Count of the number of images for each month</h4>
+
+<div class="image-container">
+<figure>
+<img src="../figures/month_counts_all_years(2016-2019).png" alt="month counts all years" width="700" height="400">
+<p>Figure 8: Representation of the month counts from year 2016 to 2019</p>
+</figure>
+<figure>
+<img src="../figures/image_counts_all_years_individual.png" alt="month counts all years individual" width="700" height="400">
+<p>Figure 9: Representation of the month counts all years (from 2016 to 2019) individually</p>
+</figure>
+</div>
+
+<h4>Count of the number of images for each province</h4>
+
+<div class="image-container">
+<figure>
+<img src="../figures/province_counts_all_years(2016-2019).png" alt="province counts all years" width="700" height="400">
+<p>Figure 10: Representation of the province counts from year 2016 to 2019</p>
+</figure>
+<figure>
+<img src="../figures/province_counts_all_years_individual.png" alt="province counts all years individual" width="700" height="400">
+<p>Figure 11: Representation of the province counts all years (from 2016 to 2019) individually</p>
+</figure>
+</div>
+
+<p>There are also python scripts for the visualization:</p>
+
+
+<h4>Data visualization</h4>
+<p>Here is the script to <a href="dataset_stats/data_visualization.py">visualize data</a></p>
+
+<h4>Data visualization all years</h4>
+<p>Here is the script to <a href="dataset_stats/data_visualization_all_years.py">visualize the data from all years</a></p>
+
+<p>And finally, in this section, there is a tab regrouping <a href="dataset_stats/canadiand_cropland_dataset_stats.xlsx">all the statistics within the dataset</a>.</p> 
+
+</section>
+
+
+            </section>
+            <section id="earth-engine">
+                <h2>Earth Engine</h2>
+                <p>
+                  Contains the <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/earth_engine/CAN_GEE_points.js">JavaScript code</a> used to collect points of agricultural fields all across Canada from the months of June 2017 to October 2020 (Figure 3). The code can be visualized directly in GEE using this <a href="https://code.earthengine.google.com/?scriptPath=users%2Famandaboatswainj%2FAAFC-cropland-database%3AAAFC_GEE_dataset_points">link</a>. Note that you must be registered with an activated GEE account to view the script and run it on the cloud.
+                </p>
+                <figure>
+                    <img src="../figures/ACI_point_map_2019.png" alt="geographical points" width="1000" height="500">
+                    <figcaption>Figure 12: Map representing an overview of the selected geographical locations used in the <i>Canadian Cropland Dataset</i>. Markers are randomly chosen fields and are color-coded by the 2019 crop types.</figcaption>
+                  </figure>
+            </section>
+          
+            <section id="machine-learning">
+                <h2>Machine Learning</h2>
+                <p>
+                  Contains python code for the deep learning benchmark models (ResNet-50, LRCN, 3D-CNN, etc).
+                </p>
+                
+            </section>
+            
+
+        <section id="figures">
+                <h2>Figures</h2>
+        <img src="../figures/CNN_ResNet_model.png" alt="ResNet model">
+        <figcaption>Figure 13: CNN ResNet Model </figcaption>
+        <br> 
+        <br>
+        <br>
+        <img src="../figures/simple_CNN_model.png" alt="Simple CNN Model">
+        <figcaption>Figure 14: Simple CNN model</figcaption>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <p><p>If you have used this dataset, please cite the following presentation:</p>
+            <p>[1] Towards the Creation of a Canadian Land-Use Dataset for Agricultural Land Classification. Amanda A. Boatswain Jacques, Abdoulaye Baniré Diallo, Etienne Lord. 42nd Canadian Symposium on Remote Sensing: Understanding Our World: Remote Sensing for a Sustainable Future, June 2021. Virtual.</p>
+            </p>
+            </section>
+
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p> <p>For any questions or concerns regarding this repository, please contact <a href="mailto:boatswain_jacques.amanda@courrier.uqam.ca">boatswain_jacques.amanda@courrier.uqam.ca</a>.</p>
+
+            </p>
+            </section>
+    </main>
+  </body>
+</html>
