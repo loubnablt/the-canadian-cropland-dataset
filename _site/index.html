@@ -98,10 +98,13 @@
             
         <p>The dataset can be accessed through this <a href="https://drive.google.com/drive/folders/1mNI8B5EMk0Xgvx2Pc9ztnQRaW9pXh8yb?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a> link and could be used to study the effects of different crop rotation patterns and management practices on long-term yield, land resilience and overall field productivity. In the upcoming months, we will be hosting it on a website at Université du Québec à Montreal. The Drive contains the preprocessed and cleaned images from all years in train/validation/test splits. Each split is identical and contains the same points across the image type (RGB, GNDVI, etc.). In the future, we expect that this evolving dataset will drive the development of robust agro-environmental models, enabling accelerated understanding of intricate agricultural regions through accurate and continuous monitoring of land cover.</p>
             
-            <p><img src="figures/crop_mosaic_10_categories.png" alt="dataset overview" width="800" height="400"><br>
-                Figure 1: An overview of sample patches of the crop classes in the dataset. The images measure 64 x 64 pixels and have a spatial resolution of 10 m/pixel.</p> 
-    <br>
-
+        <p>
+            <div style="text-align: center;">
+                <img src="figures/crop_mosaic_10_categories.png" alt="dataset overview" width="800" height="400"><br>
+                Figure 1: An overview of sample patches of the crop classes in the dataset. The images measure 64 x 64 pixels and have a spatial resolution of 10 m/pixel.
+            </div>
+        </p>
+      
         <section id="features">
             <h2>Features</h2>
             <p> <ul>
@@ -150,9 +153,13 @@ conda install -c conda-forge rasterio
             </p>
 
             <figure>
+                <p>
+                    <div style="text-align: center;">
                 <img src="figures/rapid_tags.png" alt="rapid tags">
                 <figcaption>Figure 3: A screenshot of the data cleaning software developed in Java. The dataset is manually curated by manually removing cloudy images, noisy images and images with missing pixels.</figcaption>
-              </figure>
+            </div>
+            </p>  
+            </figure>
               <br>
               <br>
 
@@ -278,8 +285,12 @@ conda install -c conda-forge rasterio
 <section id="median-vegetation-index">
     <h2>Median Vegetation Index</h2>
         <figure>
+        <p>
+        <div style="text-align: center;">
           <img src="figures/vegetation.indice.png" alt="vegetation indices" width="500" height="400">
           <figcaption>Figure 2: Collected imagery - Median vegetation indices.</figcaption>
+       </div>
+       </p>
         </figure>
 
         <br>
@@ -334,13 +345,9 @@ conda install -c conda-forge rasterio
               <p>Where R<sub>750</sub> is the NIR spectral band centered at 750 nm.</p>
             </li>
             <li>
-<<<<<<< HEAD
               <strong>OSAVI</strong> - In conditions when vegetation is low and soil properties are unknown, indices like the NDVI can be subject to bias due to high levels of reflection. The <em>Optimized Soil-Adjusted Variation Index</em> was created to provide an estimate of biomass that is more resilient when faced with soil and atmospheric effects. OSAVI is defined as:  
               <p style="text-align: center; border: 1px solid black;"><em>OSAVI = OSAVI = (ρ<sub>NIR</sub> - ρ<sub>red</sub>) / (ρ<sub>NIR</sub> + ρ<sub>red</sub> + 0.16)</em></p>
               </li>
-=======
-              <strong>OSAVI</strong> - In conditions when vegetation is low and soil properties are unknown, indices like the NDVI can be subject to bias due to high levels of reflection. The <em>Optimized Soil-Adjusted Variation Index</em> was created to provide an estimate of biomass that is more
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
 </section>
           
 
@@ -453,9 +460,13 @@ conda install -c conda-forge rasterio
                   Contains the <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/earth_engine/CAN_GEE_points.js">JavaScript code</a> used to collect points of agricultural fields all across Canada from the months of June 2017 to October 2020 (Figure 3). The code can be visualized directly in GEE using this <a href="https://code.earthengine.google.com/?scriptPath=users%2Famandaboatswainj%2FAAFC-cropland-database%3AAAFC_GEE_dataset_points">link</a>. Note that you must be registered with an activated GEE account to view the script and run it on the cloud.
                 </p>
                 <figure>
+                <p>
+                <div style="text-align: center;">
                     <img src="figures/ACI_point_map_2019.png" alt="geographical points" width="1000" height="500">
                     <figcaption>Figure 12: Map representing an overview of the selected geographical locations used in the <i>Canadian Cropland Dataset</i>. Markers are randomly chosen fields and are color-coded by the 2019 crop types.</figcaption>
-                  </figure>
+                </div>
+                </p> 
+                </figure>
             </section>
           
             <section id="machine-learning">
@@ -469,13 +480,22 @@ conda install -c conda-forge rasterio
 
         <section id="figures">
                 <h2>Figures</h2>
+
+        <p>
+        <div style="text-align: center;">
         <img src="figures/CNN_ResNet_model.png" alt="ResNet model">
         <figcaption>Figure 13: CNN ResNet Model </figcaption>
+        </div>
+        </p>
         <br> 
         <br>
         <br>
+        <p>
+        <div style="text-align: center;">
         <img src="figures/simple_CNN_model.png" alt="Simple CNN Model">
         <figcaption>Figure 14: Simple CNN model</figcaption>
+        </div>
+        </p>
         </section>
 
         <section id="references">
