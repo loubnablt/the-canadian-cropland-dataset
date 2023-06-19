@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,43 +73,12 @@
             </ul>
         </li>
         <li>
-=======
-<!doctype html>
-<html>
-  <head>
-    <style>
-        body {font-family:'Times New Roman', Times, serif;}
-    </style>
-    <meta charset="utf-8">
-    <title>The Canadian Cropland Dataset</title>
-    <style>
-        h1{
-            text-align: center;
-        }
-    </style>
-</head>
-
-    <!DOCTYPE html>
-<html>
-<head>
-    <div class="banner">
-        <ul class="menu">
-          <li>
-            <a href="#dataset-description">Dataset Description</a>
-            <ul class="submenu">
-              <li><a href="#features">Features</a></li>
-              <li><a href="#running-the-software">Running the Software</a></li>
-            </ul>
-          </li>
-          <li>
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
             <a href="#repository-description">Description of Repository</a>
             <ul class="submenu">
                 <li><a href="#data-cleaning">Data Cleaning</a></li>
                 <li><a href="#data-collection">Data Collection</a></li>
                 <li><a href="#earth-engine">Earth Engine</a></li>
                 <li><a href="#machine-learning">Machine Learning</a></li>
-<<<<<<< HEAD
                 <li><a href="#figures">Figures</a></li>
             </ul>
         </li>
@@ -120,70 +88,6 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 </div>
-=======
-                <li><a href="#figures">Figures</a></li> 
-            </ul>
-            </li>
-          <li><a href="#median-vegetation-index">Median Vegetation Index</a></li>
-          <li><a href="#statistics">Statistics</a></li>
-          <li><a href="#references">References</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-<style>
-.banner {
-        background-color: #f0f0f0;
-        padding: 10px;
-      }
-      
-      .menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center; /* Aligner les éléments au centre */
-      }
-      
-      .menu li {
-        display: inline;
-        margin-right: 10px;
-        position: relative; /* Définir une position relative pour les éléments du menu */
-    }
-      
-      .menu li a {
-        text-decoration: none;
-        color: #333;
-        padding: 5px 10px;
-      }
-      
-      .menu li a:hover {
-        background-color: #333;
-        color: #fff;
-      }
-
-      .submenu {
-        display: none; /* Masquer le sous-menu par défaut */
-        position: absolute; /* Positionner le sous-menu de manière absolue */
-        top: 100%; /* Positionner le sous-menu en dessous de l'élément parent */
-        left: 0;
-        background-color: #f0f0f0;
-        padding: 10px;
-    }
-
-    .menu li:hover .submenu {
-      display: block; /* Afficher le sous-menu au survol */
-    }
-    
-    .submenu li {
-      display: block;
-      margin: 5px 0;
-    }
-  </style>
-
-</style>
-</head>
-
-  <body>
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
     <h1>{{page.title}}</h1>
     
     <main>
@@ -194,11 +98,7 @@
             
         <p>The dataset can be accessed through this <a href="https://drive.google.com/drive/folders/1mNI8B5EMk0Xgvx2Pc9ztnQRaW9pXh8yb?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a> link and could be used to study the effects of different crop rotation patterns and management practices on long-term yield, land resilience and overall field productivity. In the upcoming months, we will be hosting it on a website at Université du Québec à Montreal. The Drive contains the preprocessed and cleaned images from all years in train/validation/test splits. Each split is identical and contains the same points across the image type (RGB, GNDVI, etc.). In the future, we expect that this evolving dataset will drive the development of robust agro-environmental models, enabling accelerated understanding of intricate agricultural regions through accurate and continuous monitoring of land cover.</p>
             
-<<<<<<< HEAD
             <p><img src="figures/crop_mosaic_10_categories.png" alt="dataset overview" width="800" height="400"><br>
-=======
-            <p><img src="../figures/crop_mosaic_10_categories.png" alt="dataset overview" width="800" height="400"><br>
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
                 Figure 1: An overview of sample patches of the crop classes in the dataset. The images measure 64 x 64 pixels and have a spatial resolution of 10 m/pixel.</p> 
     <br>
 
@@ -250,18 +150,12 @@ conda install -c conda-forge rasterio
             </p>
 
             <figure>
-<<<<<<< HEAD
                 <img src="figures/rapid_tags.png" alt="rapid tags">
                 <figcaption>Figure 3: A screenshot of the data cleaning software developed in Java. The dataset is manually curated by manually removing cloudy images, noisy images and images with missing pixels.</figcaption>
               </figure>
               <br>
               <br>
 
-=======
-                <img src="../figures/rapid_tags.png" alt="rapid tags">
-                <figcaption>Figure 3: A screenshot of the data cleaning software developed in Java. The dataset is manually curated by manually removing cloudy images, noisy images and images with missing pixels.</figcaption>
-              </figure>
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
 <p>Here are some of the python scripts that we can find about data cleaning: </p>
 <style>
     .card {
@@ -348,7 +242,6 @@ conda install -c conda-forge rasterio
 <h2>Data Collection</h2>
 <p>Contains multiple python scripts for downloading the Sentinel-2 images for each point in the sample .csv file. It also contains some data visualization code.</p>
 
-<<<<<<< HEAD
 
 <div class="card">
     <div class="card-image" style="background-image: url(figures/download_sentinel_image.png)"></div>
@@ -375,13 +268,6 @@ conda install -c conda-forge rasterio
     </div>
 
 
-=======
-<h4>Download sentinel image</h4>
-<p>Here is the python script to <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/download_sentinel_images.py">download sentinel image</a></p>
-
-<h4>Earth engine downloader</h4>
-<p>Here is the python script to <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/EarthEngineDownloader.py">earth engine downloader</a></p>
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
 
 <h4>ACI crop classifications</h4>
 <p>In the Dataset collection we also have information about <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/aci_crop_classifications_iac_classifications_des_cultures.csv">crop and some classifications</a></p>
@@ -389,23 +275,10 @@ conda install -c conda-forge rasterio
 <h4>Points all categories 2019</h4>
 <p>We can also find information about <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/points_ALL_categories_2019.csv">all categories in 2019</a> in the dataset collection.</p>
 
-<<<<<<< HEAD
 <section id="median-vegetation-index">
     <h2>Median Vegetation Index</h2>
         <figure>
           <img src="figures/vegetation.indice.png" alt="vegetation indices" width="500" height="400">
-=======
-<h4>GEE sentinel imagescraping 2018 ACI</h4>
-<p>Here is the python script for <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/data_collection/gee_sentinel_imagescraping_2018_ACI.py">GEE sentinel imagescraping 2018 ACI</a></p>
-</section>
-
-
-
-<section id="median-vegetation-index">
-    <h2>Median Vegetation Index</h2>
-        <figure>
-          <img src="../figures/vegetation.indice.png" alt="vegetation indices" width="500" height="400">
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
           <figcaption>Figure 2: Collected imagery - Median vegetation indices.</figcaption>
         </figure>
 
@@ -508,19 +381,11 @@ conda install -c conda-forge rasterio
 
   <div class="image-container">
     <figure>
-<<<<<<< HEAD
       <img src="figures/crop_counts_all_years(2016-2019).png" alt="crop counts all years" width="700" height="400">
       <figcaption>Figure 4: Representation of the crop counts from year 2016 to 2019</figcaption>
     </figure>
     <figure>
       <img src="figures/crop_counts_all_years_individual.png" alt="crop counts all years individual" width="700" height="400">
-=======
-      <img src="../figures/crop_counts_all_years(2016-2019).png" alt="crop counts all years" width="700" height="400">
-      <figcaption>Figure 4: Representation of the crop counts from year 2016 to 2019</figcaption>
-    </figure>
-    <figure>
-      <img src="../figures/crop_counts_all_years_individual.png" alt="crop counts all years individual" width="700" height="400">
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
       <figcaption>Figure 5: Representation of the crop counts all years (from 2016 to 2019) individually</figcaption>
     </figure>
   </div>
@@ -531,19 +396,11 @@ conda install -c conda-forge rasterio
 
 <div class="image-container">
 <figure>
-<<<<<<< HEAD
     <img src="figures/image_counts_all_years(2016-2019).png" alt="image counts all years" width="700" height="400">
     <p>Figure 6: Representation of the image counts from year 2016 to 2019</p>
 </figure>
 <figure>
 <img src="figures/image_counts_all_years_individual.png" alt="image counts all years individual" width="700" height="400">
-=======
-    <img src="../figures/image_counts_all_years(2016-2019).png" alt="image counts all years" width="700" height="400">
-    <p>Figure 6: Representation of the image counts from year 2016 to 2019</p>
-</figure>
-<figure>
-<img src="../figures/image_counts_all_years_individual.png" alt="image counts all years individual" width="700" height="400">
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
 <p>Figure 7: Representation of the image counts all years (from 2016 to 2019) individually</p>
 </figure>
 </div>
@@ -553,11 +410,7 @@ conda install -c conda-forge rasterio
 
 <div class="image-container">
 <figure>
-<<<<<<< HEAD
 <img src="figures/month_counts_all_years(2016-2019).png" alt="month counts all years" width="700" height="400">
-=======
-<img src="../figures/month_counts_all_years(2016-2019).png" alt="month counts all years" width="700" height="400">
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
 <p>Figure 8: Representation of the month counts from year 2016 to 2019</p>
 </figure>
 <figure>
@@ -570,19 +423,11 @@ conda install -c conda-forge rasterio
 
 <div class="image-container">
 <figure>
-<<<<<<< HEAD
 <img src="figures/province_counts_all_years(2016-2019).png" alt="province counts all years" width="700" height="400">
 <p>Figure 10: Representation of the province counts from year 2016 to 2019</p>
 </figure>
 <figure>
 <img src="figures/province_counts_all_years_individual.png" alt="province counts all years individual" width="700" height="400">
-=======
-<img src="../figures/province_counts_all_years(2016-2019).png" alt="province counts all years" width="700" height="400">
-<p>Figure 10: Representation of the province counts from year 2016 to 2019</p>
-</figure>
-<figure>
-<img src="../figures/province_counts_all_years_individual.png" alt="province counts all years individual" width="700" height="400">
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
 <p>Figure 11: Representation of the province counts all years (from 2016 to 2019) individually</p>
 </figure>
 </div>
@@ -608,11 +453,7 @@ conda install -c conda-forge rasterio
                   Contains the <a href="https://github.com/bioinfoUQAM/Canadian-cropland-dataset/blob/main/earth_engine/CAN_GEE_points.js">JavaScript code</a> used to collect points of agricultural fields all across Canada from the months of June 2017 to October 2020 (Figure 3). The code can be visualized directly in GEE using this <a href="https://code.earthengine.google.com/?scriptPath=users%2Famandaboatswainj%2FAAFC-cropland-database%3AAAFC_GEE_dataset_points">link</a>. Note that you must be registered with an activated GEE account to view the script and run it on the cloud.
                 </p>
                 <figure>
-<<<<<<< HEAD
                     <img src="figures/ACI_point_map_2019.png" alt="geographical points" width="1000" height="500">
-=======
-                    <img src="../figures/ACI_point_map_2019.png" alt="geographical points" width="1000" height="500">
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
                     <figcaption>Figure 12: Map representing an overview of the selected geographical locations used in the <i>Canadian Cropland Dataset</i>. Markers are randomly chosen fields and are color-coded by the 2019 crop types.</figcaption>
                   </figure>
             </section>
@@ -628,20 +469,12 @@ conda install -c conda-forge rasterio
 
         <section id="figures">
                 <h2>Figures</h2>
-<<<<<<< HEAD
         <img src="figures/CNN_ResNet_model.png" alt="ResNet model">
-=======
-        <img src="../figures/CNN_ResNet_model.png" alt="ResNet model">
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
         <figcaption>Figure 13: CNN ResNet Model </figcaption>
         <br> 
         <br>
         <br>
-<<<<<<< HEAD
         <img src="figures/simple_CNN_model.png" alt="Simple CNN Model">
-=======
-        <img src="../figures/simple_CNN_model.png" alt="Simple CNN Model">
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
         <figcaption>Figure 14: Simple CNN model</figcaption>
         </section>
 
@@ -659,10 +492,6 @@ conda install -c conda-forge rasterio
 
             </p>
             </section>
-<<<<<<< HEAD
-
-=======
->>>>>>> 35b2856c3ae15ae1ad3b4f3721a6bcfbb65150b9
     </main>
   </body>
 </html>
