@@ -59,36 +59,42 @@
             margin: 5px 0;
         }
     </style>
+    <style>
+        body {
+            margin: 20px;
+        }
+    </style>
+    
 
 </head>
 
 <body>
 <div class="banner">
-  <ul class="menu">
-    <li>
-        <a href="index.html#dataset-description">Dataset Description</a>
-        <ul class="submenu">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#running-the-software">Running the Software</a></li>
-        </ul>
-    </li>
-    <li>
-        <a href="how_we_created.html">How we created it</a>
-        <ul class="submenu">
-            <li><a href="#data-cleaning">Data Cleaning</a></li>
-            <li><a href="#data-collection">Data Collection</a></li>
-            <li><a href="#earth-engine">Earth Engine</a></li>
-            <li><a href="#machine-learning">Machine Learning</a></li>
-            <li><a href="#figures">Figures</a></li>
-        </ul>
-    </li>
-    <li><a href="benchmarking.html">Benchmarking</a></li>
-    <li><a href="paper.html">Paper</a></li>
-    <li><a href="code.html">Code</a></li>
-    <li><a href="contact.html">Contact</a></li>
-</ul>
+    <ul class="menu">
+        <li>
+            <a href="#dataset-description">Dataset Description</a>
+            <ul class="submenu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#running-the-software">Running the Software</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#repository-description">Description of Repository</a>
+            <ul class="submenu">
+                <li><a href="#data-cleaning">Data Cleaning</a></li>
+                <li><a href="#data-collection">Data Collection</a></li>
+                <li><a href="#earth-engine">Earth Engine</a></li>
+                <li><a href="#machine-learning">Machine Learning</a></li>
+                <li><a href="#figures">Figures</a></li>
+            </ul>
+        </li>
+        <li><a href="#median-vegetation-index">Median Vegetation Index</a></li>
+        <li><a href="statistics.html">Statistics</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </div>
-    <h1>{{page.title}}</h1>
+    <h1>The Canadian Cropland Dataset</h1>
     
     <main>
 
@@ -103,6 +109,7 @@
         <br>
         <section id="dataset-description">
             <h2>Dataset description</h2>
+            <
             <p>This repository contains instructions and code for use with the novel patch-based dataset, the <em>Canadian Cropland Dataset</em>, inspired by the <a href="https://ieeexplore.ieee.org/document/8736785" target="_blank" rel="noopener noreferrer">Eurosat dataset</a>. It is compiled using optical satellite images of Canadian agricultural croplands retrieved from Sentinel-2. A total of 78,536 high-resolution geo-referenced images (Figure 1) of 10 main crop types (barley, canola, corn, mixedwood, oats, orchard, pasture, potato, soybean, springwheat) over 5 months (June-October) and 4 years (2017-2020) were extracted using <a href="https://earthengine.google.com/" target="_blank" rel="noopener noreferrer">Google Earth Engine</a> (GEE) and were automatically labelled with the <a href="https://www.agr.gc.ca/atlas/aci" target="_blank" rel="noopener noreferrer">Canadian Crop Inventory</a>. Each image contains 12 main spectral bands as well as a selection of bands corresponding to vegetation indices (GNDVI, NDVI, NDVI45, OSAVI and PSRI) (Figure 2). Images were collected using a list of 6,633 geographical points of Canadian agricultural fields.
             </p>
             
