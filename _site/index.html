@@ -91,6 +91,16 @@
     <h1>The Canadian Cropland Dataset</h1>
     
     <main>
+
+
+        <p>
+            <div style="text-align: center;">
+                <img src="figures/crop_mosaic_10_categories.png" alt="dataset overview" width="800" height="400"><br>
+                An overview of sample patches of the crop classes in the dataset. The images measure 64 x 64 pixels and have a spatial resolution of 10 m/pixel.
+            </div>
+        </p>
+        <br>
+        <br>
         <section id="dataset-description">
             <h2>Dataset description</h2>
             <p>This repository contains instructions and code for use with the novel patch-based dataset, the <em>Canadian Cropland Dataset</em>, inspired by the <a href="https://ieeexplore.ieee.org/document/8736785" target="_blank" rel="noopener noreferrer">Eurosat dataset</a>. It is compiled using optical satellite images of Canadian agricultural croplands retrieved from Sentinel-2. A total of 78,536 high-resolution geo-referenced images (Figure 1) of 10 main crop types (barley, canola, corn, mixedwood, oats, orchard, pasture, potato, soybean, springwheat) over 5 months (June-October) and 4 years (2017-2020) were extracted using <a href="https://earthengine.google.com/" target="_blank" rel="noopener noreferrer">Google Earth Engine</a> (GEE) and were automatically labelled with the <a href="https://www.agr.gc.ca/atlas/aci" target="_blank" rel="noopener noreferrer">Canadian Crop Inventory</a>. Each image contains 12 main spectral bands as well as a selection of bands corresponding to vegetation indices (GNDVI, NDVI, NDVI45, OSAVI and PSRI) (Figure 2). Images were collected using a list of 6,633 geographical points of Canadian agricultural fields.
@@ -98,13 +108,7 @@
             
         <p>The dataset can be accessed through this <a href="https://drive.google.com/drive/folders/1mNI8B5EMk0Xgvx2Pc9ztnQRaW9pXh8yb?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a> link and could be used to study the effects of different crop rotation patterns and management practices on long-term yield, land resilience and overall field productivity. In the upcoming months, we will be hosting it on a website at Université du Québec à Montreal. The Drive contains the preprocessed and cleaned images from all years in train/validation/test splits. Each split is identical and contains the same points across the image type (RGB, GNDVI, etc.). In the future, we expect that this evolving dataset will drive the development of robust agro-environmental models, enabling accelerated understanding of intricate agricultural regions through accurate and continuous monitoring of land cover.</p>
             
-        <p>
-            <div style="text-align: center;">
-                <img src="figures/crop_mosaic_10_categories.png" alt="dataset overview" width="800" height="400"><br>
-                Figure 1: An overview of sample patches of the crop classes in the dataset. The images measure 64 x 64 pixels and have a spatial resolution of 10 m/pixel.
-            </div>
-        </p>
-      
+     
         <section id="features">
             <h2>Features</h2>
             <p> <ul>
