@@ -15,7 +15,18 @@ ___
 
 ### Paper
 
-The paper associated with this dataset can be found on [ArXiv](https://arxiv.org/abs/2306.00114). If you find this dataset or the benchmarks useful in your research, please cite the paper as: 
+The paper associated with this dataset can be found on [ArXiv](https://arxiv.org/abs/2306.00114). If you find this dataset or the benchmarks useful in your research, please consider citing our work.  
+
+#### Citations 
+
+**APA Style**
+
+```
+Boatswain Jacques, A. A. B., Diallo, A. B., & Lord, E. (2023). The Canadian Cropland Dataset: A New Land Cover Dataset for Multitemporal Deep Learning Classification in Agriculture. arXiv [Cs.CV]. Retrieved from http://arxiv.org/abs/2306.00114
+```
+
+
+**Bibtex**
 
 ```
 @misc{boatswainjacques2023canadian,
