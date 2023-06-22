@@ -53,7 +53,7 @@ ___
 
 Reference: *Uniformizing techniques to process CT scans with 3D CNNs for tuberculosis prediction.*
 
-Zunair, H., Rahman, A., Mohammed, N., & Cohen, J. P. (2020, October). Uniformizing techniques to process CT scans with 3D CNNs for tuberculosis prediction.
+> Zunair, H., Rahman, A., Mohammed, N., & Cohen, J. P. (2020, October). Uniformizing techniques to process CT scans with 3D CNNs for tuberculosis prediction.
 In International Workshop on PRedictive Intelligence In MEdicine (pp. 156-168). Springer, Cham.
 
 [https://arxiv.org/abs/2007.13224]
@@ -62,7 +62,7 @@ In International Workshop on PRedictive Intelligence In MEdicine (pp. 156-168). 
 
 Reference: *Long-term recurrent convolutional networks for visual recognition and description.*
 
-J. Donahue, L. Hendricks, S. Guadarrama, M. Rohrbach, S. Venugopalan, T. Darrell, and K. Saenko. CVPR , page 2625-2634. IEEE Computer Society, (2015)
+> J. Donahue, L. Hendricks, S. Guadarrama, M. Rohrbach, S. Venugopalan, T. Darrell, and K. Saenko. CVPR , page 2625-2634. IEEE Computer Society, (2015)
 
 [https://arxiv.org/pdf/1411.4389v3.pdf]
 
