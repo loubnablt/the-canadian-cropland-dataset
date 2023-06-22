@@ -10,7 +10,7 @@ We present two classification experiments performed using the 2019 version of th
 
 Add Figure figures/classification_experiments.png
 
-<img src="the-canadian-cropland-dataset/blob/main/figures/classification_experiments.png" width="200" height="200" />
+<img src="figures/classification_experiments.png" width="200" height="200" />
 
 Tables showing results for both experiments are figured below. 
 
