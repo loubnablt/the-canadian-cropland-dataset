@@ -23,7 +23,7 @@ ___
 
 - PNG files
   - RGB images
-  - Vegetation indices (Notes: make table less wide, Remove border around equation if possible?)
+  - Vegetation indices (Notes: make tables less wide, and remove border around equation if possible?)
 						
 - .zip folders (RAW data) (Note for Amanda): Add Table with link to Google Earth Engine (Sentinel-2) band description.
   
