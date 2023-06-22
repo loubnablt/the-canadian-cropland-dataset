@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The Canadian Cropland Dataset
+title: How we created it 
 ---
 
 <h1 style="text-align: center;"> How we created it </h1>
