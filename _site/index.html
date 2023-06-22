@@ -102,7 +102,9 @@
 </div>
 
 <body>
-    <h3 id="abstract">Abstract</h3>
+    <p align="center"><img src="figures/crop_mosaic_10_categories.png" width="980" height="495" /></p>
+
+<h3 id="abstract">Abstract</h3>
 
 <p>The <em>Canadian Cropland Dataset</em> is a temporal patch-based dataset of remote sensing images of Canadian croplands retrieved from the Sentinel-2 satellite constellation. The dataset contains 78,536 manually verified and curated high-resolution (10 m/pixel, 640 x 640 m) geo-referenced images from 10 crop classes collected over four crop production years (2017-2020) and five months (June-October) which were extracted using <a href="https://earthengine.google.com/" title="Google Earth Engine">Google Earth Engine</a> (GEE) and were automatically labelled with the <a href="https://www.agr.gc.ca/atlas/aci" title="Canadian Crop Inventory">Canadian Crop Inventory</a> Each instance contains 12 spectral bands, an RGB image, and additional vegetation index bands. Individually, each crop category contains at least 4,800 samples. In perspective, we expect this evolving dataset to propel the creation of robust agro-environmental models that can accelerate the comprehension of complex agricultural regions by providing accurate and continuous monitoring of land cover.</p>
 
@@ -114,7 +116,7 @@
 
 <ul>
   <li><strong>Multitemporal remote sensing dataset spanning multiple years :</strong> . More than 70% of geolocations have an image collection of at least 10 images (over 4 years), allowing a temporally rich monitoring of a field through a multi-year, multi-crop rotation</li>
-  <li><strong>Transformed .PNG images ready to be directly used with existing deep learning benchmarks :</strong> Each field instance contains an RGB image as well as common vegetation index images (NDVI, GNDVI, OSAVI, etc.) in .PNG format.</li>
+  <li><strong>Transformed .PNG images ready to be directly used with existing deep learning benchmarks :</strong> Each field instance contains an RGB image as well as common vegetation index images (NDVI, NDVI45, GNDVI, OSAVI, PSRI and NDWI) in .PNG format.</li>
   <li><strong>High spectral resolution images :</strong> We also supply a .zip folder with the original Sentinel-2 bands (12) and 6 additional vegetation index bands as georeferenced .TIF files.</li>
   <li><strong>Pre-constructed train / val / test sets :</strong> The dataset comes prepackaged in dedicated training (70%), validation (15%) and testing sets (15%) suitable for use with Keras or Tensorflow image data generators. These sets remain the same for each individual year and image type (i.e NDVI, PSRI, etc.). Images belonging to the same geographical coordinates were kept together during the dataset splitting process</li>
 </ul>

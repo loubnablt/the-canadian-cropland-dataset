@@ -102,9 +102,7 @@
 </div>
 
 <body>
-    <h1 style="text-align: center;"> How we created it </h1>
-
-<h3 id="image-and-label-collection">Image and Label Collection</h3>
+    <h3 id="image-and-label-collection">Image and Label Collection</h3>
 
 <hr />
 
@@ -114,84 +112,96 @@
 
 <h3 id="dataset-statistics">Dataset Statistics</h3>
 
+<style>
+    .image-container {
+      display: flex; /* Utiliser le flexbox pour aligner les images horizontalement */
+      justify-content: space-between; /* Espacement égal entre les images */
+    }
+    
+    .image-container figure {
+      width: 50%; /* Chaque figure prend 50% de la largeur du conteneur */
+      text-align: center; /* Centrer le contenu de la figure */
+    }
+    
+    .image-container img {
+      width: 100%; /* L'image occupe toute la largeur de la figure */
+    }
+  </style>
+
+<!--  <style>
+    h4 {
+        text-align: center;
+    }
+  </style>
+  --->
+
+<h4>Count of the number of images for each crop type</h4>
+
+<div class="image-container">
+    <figure>
+      <img src="figures/crop_counts_all_years(2016-2019).png" alt="crop counts all years" width="700" height="400" />
+      <figcaption>Figure 4: Representation of the crop counts from year 2016 to 2019</figcaption>
+    </figure>
+    <figure>
+      <img src="figures/crop_counts_all_years_individual.png" alt="crop counts all years individual" width="700" height="400" />
+      <figcaption>Figure 5: Representation of the crop counts all years (from 2016 to 2019) individually</figcaption>
+    </figure>
+  </div>
+
+<h4>Count of the number of sets for each image in a set</h4>
+
+<div class="image-container">
+<figure>
+    <img src="figures/image_counts_all_years(2016-2019).png" alt="image counts all years" width="700" height="400" />
+    <p>Figure 6: Representation of the image counts from year 2016 to 2019</p>
+</figure>
+<figure>
+<img src="figures/image_counts_all_years_individual.png" alt="image counts all years individual" width="700" height="400" />
+<p>Figure 7: Representation of the image counts all years (from 2016 to 2019) individually</p>
+</figure>
+</div>
+
+<h4>Count of the number of images for each month</h4>
+
+<div class="image-container">
+<figure>
+<img src="figures/month_counts_all_years(2016-2019).png" alt="month counts all years" width="700" height="400" />
+<p>Figure 8: Representation of the month counts from year 2016 to 2019</p>
+</figure>
+<figure>
+<img src="figures/image_counts_all_years_individual.png" alt="month counts all years individual" width="700" height="400" />
+<p>Figure 9: Representation of the month counts all years (from 2016 to 2019) individually</p>
+</figure>
+</div>
+
+<h4>Count of the number of images for each province</h4>
+
+<div class="image-container">
+<figure>
+<img src="figures/province_counts_all_years(2016-2019).png" alt="province counts all years" width="700" height="400" />
+<p>Figure 10: Representation of the province counts from year 2016 to 2019</p>
+</figure>
+<figure>
+<img src="figures/province_counts_all_years_individual.png" alt="province counts all years individual" width="700" height="400" />
+<p>Figure 11: Representation of the province counts all years (from 2016 to 2019) individually</p>
+</figure>
+</div>
+
 <hr />
 
 <h3 id="features">Features</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Index</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>NDVI</td>
-      <td>Indicator of plant growth and health, measures emitted chlorophyll</td>
-    </tr>
-    <tr>
-      <td>NDVI45</td>
-      <td>Indicates the amount of biomass and evapotranspiration, provides information on canopy structure</td>
-    </tr>
-    <tr>
-      <td>GNDVI</td>
-      <td>Correlates to the rate of photosynthesis, used to monitor plant stress</td>
-    </tr>
-    <tr>
-      <td>PSRI</td>
-      <td>Measures the onset, the stage, and the relative rates of the senescence or ripening of a crop cover</td>
-    </tr>
-    <tr>
-      <td>OSAVI</td>
-      <td>Provides an estimate of biomass that is more resilient when faced with soil and atmospheric effects</td>
-    </tr>
-  </tbody>
-</table>
-
 <ul>
-  <li>
-    <p><strong>NDVI</strong> The <em>Normalized Difference Vegetation Index</em> is one of the most predominantly used indicators of plant growth and health. It correlates with the amount of chlorophyll emitted by a plant. NDVI is defined as:</p>
-
-    <p><em>NDVI = (ρ<sub>NIR</sub> - ρ<sub>red</sub>) / (ρ<sub>NIR</sub> + ρ<sub>red</sub>)</em></p>
+  <li>PNG files
+    <ul>
+      <li>RGB images</li>
+      <li>Vegetation indices (Notes: make tables less wide, and remove border around equation if possible?)</li>
+    </ul>
   </li>
+  <li>.zip folders (RAW data) (Note for Amanda): Add Table with link to Google Earth Engine (Sentinel-2) band description.</li>
 </ul>
 
-<p>Where ρ<sub>NIR</sub> is equal to the NIR band and ρ<sub>red</sub> is the visible red band.</p>
-
-<ul>
-  <li>
-    <p><strong>NDVI45</strong> The <em>NDV45</em> vegetation index is a revised version of the NDVI. It is strongly correlated with the leaf area index (LAI), which is an estimate of the amount of biomass and vegetative evapotranspiration, and provides information regarding the structure of a canopy. NDVI45 is defined as:</p>
-
-    <p><em>NDVI45 = (R<sub>704</sub> - ρ<sub>red</sub>) / (R<sub>704</sub> + ρ<sub>red</sub>)</em></p>
-  </li>
-</ul>
-
-<p>Where R<sub>704</sub> is the NIR spectral band centered at 704 nm.</p>
-
-<ul>
-  <li>
-    <p><strong>GNDVI</strong> The <em>Green Normalized Difference Vegetation Index</em> was shown to correlate to the rate of photosynthesis and is used to monitor plant stress. GNDVI is calculated in a way that is analogous to NDVI, however the red band is replaced by the green band (ρ<sub>green</sub>). GNDVI is defined as:</p>
-
-    <p><em>GNDVI = (ρ<sub>NIR</sub> - ρ<sub>green</sub>) / (ρ<sub>NIR</sub> + ρ<sub>green</sub>)</em></p>
-  </li>
-  <li>
-    <p><strong>PSRI</strong> The <em>Plant Senescence Reflectance Index</em> is used to measure the onset, the stage, and the relative rates of the senescence or ripening of a crop cover. An increase in PSRI indicates heightened canopy stress. PSRI is defined by the equation:</p>
-
-    <p><em>PSRI = (ρ<sub>red</sub> - ρ<sub>blue</sub>) / R<sub>750</sub></em></p>
-  </li>
-</ul>
-
-<p>Where R<sub>750</sub> is the NIR spectral band centered at 750 nm.</p>
-
-<ul>
-  <li>
-    <p><strong>OSAVI</strong> In conditions when vegetation is low and soil properties are unknown, indices like the NDVI can be subject to bias due to high levels of reflection. The <em>Optimized Soil-Adjusted Variation Index</em> was created to provide an estimate of biomass that is more resilient when faced with soil and atmospheric effects. OSAVI is defined as:</p>
-
-    <p><em>OSAVI = (ρ<sub>NIR</sub> - ρ<sub>red</sub>) / (ρ<sub>NIR</sub> + ρ<sub>red</sub> + 0.16)</em></p>
-  </li>
-</ul>
-
+<hr />
 
   </body>
   
