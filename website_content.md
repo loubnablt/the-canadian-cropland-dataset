@@ -98,8 +98,7 @@ The paper associated with this dataset can be found on [ArXiv](https://arxiv.org
       year={2023},
       eprint={2306.00114},
       archivePrefix={arXiv},
-      primaryClass={cs.CV}}
- ```
+      primaryClass={cs.CV}} ```
 
 ___
 
