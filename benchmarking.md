@@ -10,6 +10,8 @@ We present two classification experiments performed using the 2019 version of th
 
 Add Figure figures/classification_experiments.png
 
+![classification_tasks](/figures/classification_experiments.png)
+
 Tables showing results for both experiments are figured below. 
 
 
