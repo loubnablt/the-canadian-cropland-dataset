@@ -10,7 +10,7 @@ We present two classification experiments performed using the 2019 version of th
 
 Add Figure figures/classification_experiments.png
 
-![classification_tasks](https://github.com/loubnablt/the-canadian-cropland-dataset/blob/main/figures/classification_experiments.png)
+![classification_tasks](https://github.com/loubnablt/the-canadian-cropland-dataset/blob/main/figures/classification_experiments.png =250x)
 
 Tables showing results for both experiments are figured below. 
 
