@@ -22,7 +22,7 @@ Tables showing results for both experiments are figured below.
 
 Reference: *Deep residual learning for image recognition.* 
 
-Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image recognition. In IEEE Conference on Computer Vision and Pattern Recognition, pages 770–778, 12 2016.
+> Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image recognition. In IEEE Conference on Computer Vision and Pattern Recognition, pages 770–778, 12 2016.
 
 [https://arxiv.org/abs/1512.03385]
 
@@ -30,7 +30,7 @@ Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning fo
 
 Reference: *Densely connected convolutional networks* 
 
-Gao Huang, Zhuang Liu, and Kilian Q. Weinberger. Densely connected convolutional networks. CoRR, abs/1608.06993, 2016.
+> Gao Huang, Zhuang Liu, and Kilian Q. Weinberger. Densely connected convolutional networks. CoRR, abs/1608.06993, 2016.
 
 [https://arxiv.org/abs/1608.06993]
 
@@ -38,7 +38,7 @@ Gao Huang, Zhuang Liu, and Kilian Q. Weinberger. Densely connected convolutional
 
 Reference: *Efficientnet: Rethinking model scaling for convolutional neural networks.*
 
-Mingxing Tan and Quoc V. Le. Efficientnet: Rethinking model scaling for convolutional neural networks.CoRR, abs/1905.11946, 2019.
+> Mingxing Tan and Quoc V. Le. Efficientnet: Rethinking model scaling for convolutional neural networks.CoRR, abs/1905.11946, 2019.
 
 [https://arxiv.org/abs/1905.11946]
 
