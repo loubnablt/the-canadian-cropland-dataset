@@ -10,7 +10,7 @@ We present two classification experiments performed using the 2019 version of th
 
 Add Figure figures/classification_experiments.png
 
-<img src="figures/classification_experiments.png" width="200" height="200" />
+<img src="figures/classification_experiments.png" width="800" height="600" />
 
 Tables showing results for both experiments are figured below. 
 
