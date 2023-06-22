@@ -4,7 +4,7 @@ title: The Canadian Cropland Dataset
 ---
 
 
-<p align="center"><img src="figures/crop_mosaic_10_categories.png" width="807" height="407" /></p>
+<p align="center"><img src="figures/crop_mosaic_10_categories.png" width="980" height="582" /></p>
 
 
 ### Abstract 
