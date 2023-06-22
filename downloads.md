@@ -3,9 +3,6 @@ layout: default
 title: Downloads
 ---
 
-
-<h1 style="text-align: center;"> Downloads </h1>
-
 ### Data and Datasheet 
 
 Both the cleaned and RAW versions of the dataset and can be downloaded from this [Google Drive ](https://drive.google.com/drive/folders/1mNI8B5EMk0Xgvx2Pc9ztnQRaW9pXh8yb?usp=sharing "Link to dataset") link. The *Datasheet* associated with this dataset can be downloaded as a .pdf [here](TBA). 
