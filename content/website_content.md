@@ -82,13 +82,15 @@ ___
 
 The paper associated with this dataset can be found on [ArXiv](https://arxiv.org/abs/2306.00114). If you find this dataset or the benchmarks useful in your research, please cite the paper as: 
 
- ``` @misc{boatswainjacques2023canadian,
+```json
+@misc{boatswainjacques2023canadian,
       title={The Canadian Cropland Dataset: A New Land Cover Dataset for Multitemporal Deep Learning Classification in Agriculture}, 
       author={Amanda A. {Boatswain Jacques} and {Abdoulaye Baniré} Diallo and Etienne Lord},
       year={2023},
       eprint={2306.00114},
       archivePrefix={arXiv},
-      primaryClass={cs.CV}} ```
+      primaryClass={cs.CV}}
+```
 
 ___
 
