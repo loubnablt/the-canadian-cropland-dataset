@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <meta charset="utf-8">
+    <meta content="width=device-width" charset="utf-8">
     <title>The Canadian Cropland Dataset</title>
     <H1>The Canadian Cropland Dataset</H1>
     <style>
@@ -62,6 +62,23 @@
         }
 
         body { margin-left:150px; margin-right:150px; margin-top:70px; margin-bottom:100px }
+       
+        footer {
+            padding: 10px 20px;
+            background: #666;
+            color: white;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
     </style>
         
 
@@ -105,5 +122,10 @@
     {{ content }}
   </body>
   
+  <footer>
+    <p align="center" > Laboratoire de Bioinformatique  © 2023 Université du Québec à Montréal. All rights reserved.</p>
+  </footer>
+  
+
 </head>
 </html>

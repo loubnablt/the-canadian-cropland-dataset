@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <meta charset="utf-8">
+    <meta content="width=device-width" charset="utf-8">
     <title>The Canadian Cropland Dataset</title>
     <H1>The Canadian Cropland Dataset</H1>
     <style>
@@ -62,6 +62,23 @@
         }
 
         body { margin-left:150px; margin-right:150px; margin-top:70px; margin-bottom:100px }
+       
+        footer {
+            padding: 10px 20px;
+            background: #666;
+            color: white;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
     </style>
         
 
@@ -104,20 +121,17 @@
 <body>
     <h3 id="data-and-datasheet">Data and Datasheet</h3>
 
-<p>Both the cleaned and RAW versions of the dataset and can be downloaded from this <a href="https://drive.google.com/drive/folders/1mNI8B5EMk0Xgvx2Pc9ztnQRaW9pXh8yb?usp=sharing" title="Link to dataset">Google Drive </a> link. The <em>Datasheet</em> associated with this dataset can be downloaded as a .pdf <a href="TBA">here</a>. 
-<!--- # COMMENT: (Eventually these links will be replaced with a link to the OSF.) -->
-___</p>
+<p>Both the cleaned and RAW versions of the dataset and can be downloaded from this <a href="https://drive.google.com/drive/folders/1mNI8B5EMk0Xgvx2Pc9ztnQRaW9pXh8yb?usp=sharing" title="Link to dataset">Google Drive </a> link. The <em>Datasheet</em> associated with this dataset can be downloaded as a .pdf.</p>
+
+<hr />
 
 <h3 id="paper">Paper</h3>
 
 <p>The paper associated with this dataset can be found on <a href="https://arxiv.org/abs/2306.00114">ArXiv</a>. If you find this dataset or the benchmarks useful in your research, please consider citing our work.</p>
 
-<h3 id="citations">Citations</h3>
-
 <p><strong>APA Style</strong></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Boatswain Jacques, A. A. B., Diallo, A. B., &amp; Lord, E. (2023). The Canadian Cropland Dataset: A New Land Cover Dataset for Multitemporal Deep Learning Classification in Agriculture. arXiv [Cs.CV]. Retrieved from http://arxiv.org/abs/2306.00114
-</code></pre></div></div>
+<p>Boatswain Jacques, A. A., Diallo, A. B., &amp; Lord, E. (2023). <em>The Canadian Cropland Dataset: A New Land Cover Dataset for Multitemporal Deep Learning Classification in Agriculture</em>. arXiv [Cs.CV]. Retrieved from http://arxiv.org/abs/2306.00114</p>
 
 <p><strong>Bibtex</strong></p>
 
@@ -129,10 +143,14 @@ ___</p>
       archivePrefix={arXiv},
       primaryClass={cs.CV}}
 </code></pre></div></div>
-
 <hr />
 
   </body>
   
+  <footer>
+    <p align="center" > Laboratoire de Bioinformatique  © 2023 Université du Québec à Montréal. All rights reserved.</p>
+  </footer>
+  
+
 </head>
 </html>
