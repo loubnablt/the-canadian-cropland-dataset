@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <meta charset="utf-8">
+    <meta content="width=device-width" charset="utf-8">
     <title>The Canadian Cropland Dataset</title>
     <H1>The Canadian Cropland Dataset</H1>
     <style>
@@ -62,6 +62,23 @@
         }
 
         body { margin-left:150px; margin-right:150px; margin-top:70px; margin-bottom:100px }
+       
+        footer {
+            padding: 10px 20px;
+            background: #666;
+            color: white;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
     </style>
         
 
@@ -102,9 +119,9 @@
 </div>
 
 <body>
-    <p>We present two classification experiments performed using the 2019 version of the dataset to infer the main crop types present in each image. In the first experiment, <em>static classification</em>, we treated each individual image as a training instance (static image classification). In the second experiment, <em>dynamic classification</em> we explored the use of a temporal image series as an input. 
-s
-<img src="figures/classification_experiments.png" alt="Classification Experiment" width="1000" /></p>
+    <p>We present two classification experiments performed using the 2019 version of the dataset to infer the main crop types present in each image. In the first experiment, <em>static classification</em>, we treated each individual image as a training instance (static image classification). In the second experiment, <em>dynamic classification</em> we explored the use of a temporal image series as an input.</p>
+
+<p align="center"><img src="/figures/benchmarking/classification_experiments.png" alt="Classification Experiment" width="1000" /></p>
 
 <hr />
 
@@ -112,13 +129,77 @@ s
 
 <h3 id="static-classification">Static Classification</h3>
 
-<p>[Table for Static Classification Results]</p>
+<p>The deep learning models used for the static classification task include the <a href="https://arxiv.org/abs/1512.03385"><em>ResNet-50</em></a>, the <a href="https://arxiv.org/abs/1608.06993"><em>DenseNet</em></a> and the <a href="https://arxiv.org/abs/1905.11946"><em>EfficientNet-B0</em></a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Model</th>
+      <th style="text-align: center">Precision</th>
+      <th style="text-align: center">Recall</th>
+      <th style="text-align: center">F1-Score</th>
+      <th style="text-align: center">Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><em>Static classification</em></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">DENSENET-121 (RGB)</td>
+      <td style="text-align: center">0.327 ± 0.064</td>
+      <td style="text-align: center">0.330 ± 0.030</td>
+      <td style="text-align: center">0.273 ± 0.058</td>
+      <td style="text-align: center">0.403 ± 0.045</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="dynamic-classification">Dynamic Classification</h3>
 
-<p>[Table for Dynamic Classification Results]</p>
+<p>The deep learning models used for the dynamic classification task include the <a href="https://arxiv.org/abs/1411.4389">* 3 Dimensional Convolutional Network (3DCNN)<em>](https://arxiv.org/abs/2007.13224) and the [</em>Long-Term Recurrent Convolutional Networks (LRCN)*</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Model</th>
+      <th style="text-align: center">Precision</th>
+      <th style="text-align: center">Recall</th>
+      <th style="text-align: center">F1-Score</th>
+      <th style="text-align: center">Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><em>Dynamic classification</em></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">LRCN-64 (RGB)</td>
+      <td style="text-align: center">0.610 ± 0.017</td>
+      <td style="text-align: center">0.637 ± 0.015</td>
+      <td style="text-align: center">0.617 ± 0.012</td>
+      <td style="text-align: center">0.774 ± 0.014</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
 
   </body>
   
+  <footer>
+    <p align="center" > Laboratoire de Bioinformatique  © 2023 Université du Québec à Montréal. All rights reserved.</p>
+  </footer>
+  
+
 </head>
 </html>

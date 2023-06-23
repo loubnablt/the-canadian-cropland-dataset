@@ -6,8 +6,22 @@ title: Contact
 
 ## Collaborators
 
-### UQAM 
-<!--- # Add UQAM and Bioinformatics Lab Logo -->   
+
+<div class="row">
+  <div class="column">
+    <img src="/figures/contact/UQAMlogo.png" width="100" style="margin-right: 40px" />
+    <img src="/figures/contact/bioinfo.png" width="150" style="margin-right: 40px" />
+    <p><b>Laboratoire de Bioinformatique</b></p>
+    <p>Amanda A. Boatswain Jacques, Dr. Abdoulaye Baniré Diallo, Loubna Bellatreche</p>
+  </div>
+  <div class="column" >
+    <img src="/figures/contact/AAFC.png" width="400"  style="margin-right: 40px" />
+    <p><b>Digital Agronomy and Geomatics research group</b></p>
+    <p>Dr. Etienne Lord, Samuel de Sablonnière</p>
+  </div>
+</div>
+
+<!---  ### UQAM 
 
 **Bioinformatics Laboratory**   
 Amanda A. Boatswain Jacques, Dr. Abdoulaye Baniré Diallo, Loubna Bellatreche
@@ -24,7 +38,7 @@ Amanda A. Boatswain Jacques, Dr. Abdoulaye Baniré Diallo, Loubna Bellatreche
 
 
 **Digital Agronomy and Geomatics research group**   
-Dr. Etienne Lord, Samuel de Sablonnière 
+Dr. Etienne Lord, Samuel de Sablonnière --> 
 
 
 ## Contact

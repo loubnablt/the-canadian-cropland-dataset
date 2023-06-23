@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <meta charset="utf-8">
+    <meta content="width=device-width" charset="utf-8">
     <title>The Canadian Cropland Dataset</title>
     <H1>The Canadian Cropland Dataset</H1>
     <style>
@@ -62,6 +62,23 @@
         }
 
         body { margin-left:150px; margin-right:150px; margin-top:70px; margin-bottom:100px }
+       
+        footer {
+            padding: 10px 20px;
+            background: #666;
+            color: white;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
     </style>
         
 
@@ -102,9 +119,7 @@
 </div>
 
 <body>
-    <p align="center"><img src="figures/crop_mosaic_10_categories.png" width="980" height="495" /></p>
-
-<h3 id="abstract">Abstract</h3>
+    <p align="center"><img src="figures/home/crop_mosaic_10_categories.png" alt="An overview of sample patches of the crop classes in the dataset. The images measure 64 x 64 pixels and have a spatial resolution of 10 m/pixel." width="980" height="495" /></p>
 
 <p>The <em>Canadian Cropland Dataset</em> is a temporal patch-based dataset of remote sensing images of Canadian croplands retrieved from the Sentinel-2 satellite constellation. The dataset contains 78,536 manually verified and curated high-resolution (10 m/pixel, 640 x 640 m) geo-referenced images from 10 crop classes collected over four crop production years (2017-2020) and five months (June-October) which were extracted using <a href="https://earthengine.google.com/" title="Google Earth Engine">Google Earth Engine</a> (GEE) and were automatically labelled with the <a href="https://www.agr.gc.ca/atlas/aci" title="Canadian Crop Inventory">Canadian Crop Inventory</a> Each instance contains 12 spectral bands, an RGB image, and additional vegetation index bands. Individually, each crop category contains at least 4,800 samples. In perspective, we expect this evolving dataset to propel the creation of robust agro-environmental models that can accelerate the comprehension of complex agricultural regions by providing accurate and continuous monitoring of land cover.</p>
 
@@ -139,5 +154,10 @@
 
   </body>
   
+  <footer>
+    <p align="center" > Laboratoire de Bioinformatique  © 2023 Université du Québec à Montréal. All rights reserved.</p>
+  </footer>
+  
+
 </head>
 </html>
