@@ -22,29 +22,29 @@ The figures are bar charts representing several counts (crop, image, month and p
 #### Count of the number of images for each crop type 
 
 <div align="center">
-  <img src="/figures/howwecreatedit/crop_counts_all_years(2016-2019).png" width="555" height="355" />
-  <img src="/figures/howwecreatedit/crop_counts_all_years_individual.png" width="555" height="355" />
+  <img src="figures/howwecreatedit/crop_counts_all_years(2016-2019).png" width="555" height="355" />
+  <img src="figures/howwecreatedit/crop_counts_all_years_individual.png" width="555" height="355" />
 </div>
 
 #### Count of the number of sets for each image in a set
 
 <div align="center">
-    <img src="/figures/howwecreatedit/image_counts_all_years(2016-2019).png" width="555" height="355" />
-    <img src="/figures/howwecreatedit/image_counts_all_years_individual.png" width="555" height="355" />
+    <img src="figures/howwecreatedit/image_counts_all_years(2016-2019).png" width="555" height="355" />
+    <img src="figures/howwecreatedit/image_counts_all_years_individual.png" width="555" height="355" />
 </div>
 
 #### Count of the number of images for each month
 
 <div align="center">
-    <img src="/figures/howwecreatedit/month_counts_all_years(2016-2019).png" width="555" height="355" />
-    <img src="/figures/howwecreatedit/month_counts_all_years_individual.png" width="555" height="355" />
+    <img src="figures/howwecreatedit/month_counts_all_years(2016-2019).png" width="555" height="355" />
+    <img src="figures/howwecreatedit/month_counts_all_years_individual.png" width="555" height="355" />
 </div>
 
 #### Count of the number of images for each province
 
 <div align="center">
-    <img src="/figures/howwecreatedit/province_counts_all_years(2016-2019).png" width="555" height="355" />
-    <img src="/figures/howwecreatedit/province_counts_all_years_individual.png" width="555" height="355" />
+    <img src="figures/howwecreatedit/province_counts_all_years(2016-2019).png" width="555" height="355" />
+    <img src="figures/howwecreatedit/province_counts_all_years_individual.png" width="555" height="355" />
 </div>
 ___
 
