@@ -156,6 +156,76 @@
   <li>.zip folders (RAW data) (Note for Amanda): Add Table with link to Google Earth Engine (Sentinel-2) band description.</li>
 </ul>
 
+<table style="border-collapse: collapse; table-layout: fixed; width: 100%;">
+  <tr>
+    <th style="border: 1px solid black; text-align: center; width: 10%;">Index</th>
+    <th style="border: 1px solid black; text-align: center; width: 90%;">Description</th>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <td style="border: 1px solid black; text-align: center; width: 10%;">NDVI</td>
+    <td style="border: 1px solid black; text-align: center; width: 90%;">Indicator of plant growth and health, measures emitted chlorophyll</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; text-align: center; width: 10%;">NDVI45</td>
+    <td style="border: 1px solid black; text-align: center; width: 90%;">Indicates the amount of biomass and evapotranspiration, provides information on canopy structure</td>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <td style="border: 1px solid black; text-align: center; width: 10%;">GNDVI</td>
+    <td style="border: 1px solid black; text-align: center; width: 90%;">Correlates to the rate of photosynthesis, used to monitor plant stress</td>
+  </tr>
+  <tr>
+    <td style="border: 1px solid black; text-align: center; width: 10%;">PSRI</td>
+    <td style="border: 1px solid black; text-align: center; width: 90%;">Measures the onset, the stage, and the relative rates of the senescence or ripening of a crop cover</td>
+  </tr>
+  <tr style="background-color: #f2f2f2;">
+    <td style="border: 1px solid black; text-align: center; width: 10%;">OSAVI</td>
+    <td style="border: 1px solid black; text-align: center; width: 90%;">Provides an estimate of biomass that is more resilient when faced with soil and atmospheric effects</td>
+  </tr>
+</table>
+
+<ul>
+  <li>
+    <p><strong>NDVI</strong> The <em>Normalized Difference Vegetation Index</em> is one of the most predominantly used indicators of plant growth and health. It correlates with the amount of chlorophyll emitted by a plant. NDVI is defined as:</p>
+
+    <p><em>NDVI = (ρ<sub>NIR</sub> - ρ<sub>red</sub>) / (ρ<sub>NIR</sub> + ρ<sub>red</sub>)</em></p>
+  </li>
+</ul>
+
+<p>Where ρ<sub>NIR</sub> is equal to the NIR band and ρ<sub>red</sub> is the visible red band.</p>
+
+<ul>
+  <li>
+    <p><strong>NDVI45</strong> The <em>NDV45</em> vegetation index is a revised version of the NDVI. It is strongly correlated with the leaf area index (LAI), which is an estimate of the amount of biomass and vegetative evapotranspiration, and provides information regarding the structure of a canopy. NDVI45 is defined as:</p>
+
+    <p><em>NDVI45 = (R<sub>704</sub> - ρ<sub>red</sub>) / (R<sub>704</sub> + ρ<sub>red</sub>)</em></p>
+  </li>
+</ul>
+
+<p>Where R<sub>704</sub> is the NIR spectral band centered at 704 nm.</p>
+
+<ul>
+  <li>
+    <p><strong>GNDVI</strong> The <em>Green Normalized Difference Vegetation Index</em> was shown to correlate to the rate of photosynthesis and is used to monitor plant stress. GNDVI is calculated in a way that is analogous to NDVI, however the red band is replaced by the green band (ρ<sub>green</sub>). GNDVI is defined as:</p>
+
+    <p><em>GNDVI = (ρ<sub>NIR</sub> - ρ<sub>green</sub>) / (ρ<sub>NIR</sub> + ρ<sub>green</sub>)</em></p>
+  </li>
+  <li>
+    <p><strong>PSRI</strong> The <em>Plant Senescence Reflectance Index</em> is used to measure the onset, the stage, and the relative rates of the senescence or ripening of a crop cover. An increase in PSRI indicates heightened canopy stress. PSRI is defined by the equation:</p>
+
+    <p><em>PSRI = (ρ<sub>red</sub> - ρ<sub>blue</sub>) / R<sub>750</sub></em></p>
+  </li>
+</ul>
+
+<p>Where R<sub>750</sub> is the NIR spectral band centered at 750 nm.</p>
+
+<ul>
+  <li>
+    <p><strong>OSAVI</strong> In conditions when vegetation is low and soil properties are unknown, indices like the NDVI can be subject to bias due to high levels of reflection. The <em>Optimized Soil-Adjusted Variation Index</em> was created to provide an estimate of biomass that is more resilient when faced with soil and atmospheric effects. OSAVI is defined as:</p>
+
+    <p><em>OSAVI = (ρ<sub>NIR</sub> - ρ<sub>red</sub>) / (ρ<sub>NIR</sub> + ρ<sub>red</sub> + 0.16)</em></p>
+  </li>
+</ul>
+
 <hr />
 
   </body>
