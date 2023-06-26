@@ -11,7 +11,7 @@ ___
 A total of 6,633 geographical points were randomnly chosen to generate the dataset. Each point represents the center of a farmland located in Canada, and come from all the 10 provinces. We then extracted a region of 640 m x 640 m centered around each point for the imagery. A map showing the locations chosen is figured below.  
 
 <div align="center">
-  <img src="figures/home/ACI_point_map_2019.png"/>
+  <img src="figures/home/ACI_point_map_2019.png" width="555" height="355" />
 </div>
    
 
@@ -21,7 +21,7 @@ A total of 6,633 geographical points were randomnly chosen to generate the datas
 The images in this dataset come from the *Sentinel-2 (S2)*  satellite constellation and were downloaded using [*Google Earth Engine (GEE)*](https://earthengine.google.com/). Each raw spectral image is contained in a *.zip* folder with 12 spectral geo-referenced *.TIF* images which range from the Visible Near Infra-Red (VNIR) and Near Infra-Red (NIR) to the Short Wave Infra-Red (SWIR) wavelengths (bands B1-B12). Using the original Sentinel-2 bands, we derived additional bands that correspond to common vegetation indices (see the section *Features* below for their mathematical definitions). Bands QA10 and QA20 are automatically downloaded with GEE and contain no data. Band QA60 is cloud cover mask reporting the presence of either opaque or cirrus clouds in each pixel.  
 
 <div align="center">
-  <img src="figures/howwecreatedit/zip_folder_structure.png"/>
+  <img src="figures/howwecreatedit/zip_folder_structure.png" width="555" height="355" />
 </div>
    
 
