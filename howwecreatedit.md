@@ -8,7 +8,7 @@ title: How we created it
 ___
 
 #### Point Selection
-A total of 6,633 geographical points were randomnly chosen to generate the dataset. Each point represents the center of a farmland located in Canada, and come from all the 10 provinces. We then extracted a region of 640 m x 640 m centered around each point for the imagery. A map showing the locations chosen is figured below.  
+A total of 6,633 geographical points were randomnly chosen to generate the *Canadian Cropland Dataset*. Each point represents the center of a farmland located in Canada. Points come from all the 10 provinces. With these geographical points, we then extracted imagery that captures a region of 640 m x 640 m centered around each coordinate. A map showing the locations chosen is figured below. 
 
 <div align="center">
   <img src="figures/home/ACI_point_map_2019.png"  height="800" />
