@@ -176,7 +176,7 @@ The deep learning models used for the static classification task include the [*R
 
 ### Dynamic Classification
 
-The deep learning models used for the dynamic classification task include the [* 3 Dimensional Convolutional Network (3DCNN)*](https://arxiv.org/abs/2007.13224) and the [*Long-Term Recurrent Convolutional Networks (LRCN)*](https://arxiv.org/abs/1411.4389). 
+The deep learning models used for the dynamic classification task include the [*3 Dimensional Convolutional Network (3DCNN)*](https://arxiv.org/abs/2007.13224) and the [*Long-Term Recurrent Convolutional Networks (LRCN)*](https://arxiv.org/abs/1411.4389). 
 
 
 <table style="border-collapse: collapse; table-layout: fixed; width: 100%;">
