@@ -276,5 +276,5 @@ Furthermore, more complex models (≥ 5.38 millions of parameters) underperforme
 
 
 <div align="center">
-  <img src="figures/benchmarking/results_all_models_no_ResScr.png" >
+  <img src="figures/benchmarking/results_all_models_no_ResScr.png" width="1000" >
 </div>
